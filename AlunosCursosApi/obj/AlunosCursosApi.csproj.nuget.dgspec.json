@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\AlunosCursosApi\\AlunosCursosApi.csproj": {}
+    "C:\\Users\\User\\Desktop\\TesteDesenvolvedorJunior\\AlunosCursosApi\\AlunosCursosApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\AlunosCursosApi\\AlunosCursosApi.csproj": {
+    "C:\\Users\\User\\Desktop\\TesteDesenvolvedorJunior\\AlunosCursosApi\\AlunosCursosApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\AlunosCursosApi\\AlunosCursosApi.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\TesteDesenvolvedorJunior\\AlunosCursosApi\\AlunosCursosApi.csproj",
         "projectName": "AlunosCursosApi",
-        "projectPath": "C:\\Users\\User\\Desktop\\AlunosCursosApi\\AlunosCursosApi.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\TesteDesenvolvedorJunior\\AlunosCursosApi\\AlunosCursosApi.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\AlunosCursosApi\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\TesteDesenvolvedorJunior\\AlunosCursosApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,6 +43,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
