@@ -38,6 +38,11 @@ namespace AlunosCursosApi.Controllers
         [HttpPost ("/CriarAluno")]
         public async Task<ActionResult> CriarAluno([FromBody] AlunosModel aluno)
         {
+            if(aluno.VerificarIdade())
+            {
+                return BadRequest("O aluno deve possuir mais de 18 anos");
+            }
+            
             _context.Alunos.Add(aluno);
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(BuscarAlunoPeloID), new {AlunoId = aluno.AlunoId}, aluno);

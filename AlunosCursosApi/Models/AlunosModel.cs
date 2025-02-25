@@ -16,5 +16,24 @@ namespace AlunosCursosApi.Models
         public DateTime Nascimento { get; set; }
 
         public List<MatriculasModel>? Matriculas { get; set; }
+
+        //Metodo para validar se o aluno é menor de idade
+        public bool VerificarIdade()
+        {
+            int idade = CalcularNascimento(Nascimento);
+            return idade < 18;
+        }
+
+        private int CalcularNascimento(DateTime Nascimento)
+        {
+            int idade = DateTime.Now.Year - Nascimento.Year;
+
+            if(DateTime.Now.Month < Nascimento.Month)
+            {
+                idade--;
+            }
+
+            return idade;
+        } 
     }
 }
