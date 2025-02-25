@@ -13,6 +13,6 @@ namespace AlunosCursosApi.Models
         public string Nome { get; set; }
         public string Descricao { get; set; }
 
-        public List<MatriculasModel> Matriculas { get; set; }
+        public List<MatriculasModel>? Matriculas { get; set; } = new List<MatriculasModel>();
     }
 }
