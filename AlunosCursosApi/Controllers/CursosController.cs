@@ -57,5 +57,16 @@ namespace AlunosCursosApi.Controllers
 
             return NoContent();
         }
+
+        //Deletar um curso
+        [HttpDelete ("{CursoId}")]
+        public async Task<ActionResult> DeletarCurso(int CursoId)
+        {
+            var cursoDeletado = await _context.Cursos.FindAsync(CursoId);
+            _context.Cursos.Remove(cursoDeletado);
+            await _context.SaveChangesAsync();
+            return NoContent();
+
+        }
     }
 }
