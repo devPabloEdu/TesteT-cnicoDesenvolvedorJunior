@@ -15,6 +15,6 @@ namespace AlunosCursosApi.Models
         public string  Email { get; set; }
         public DateTime Nascimento { get; set; }
 
-        public List<MatriculasModel> Matriculas { get; set; }
+        public List<MatriculasModel>? Matriculas { get; set; }
     }
 }
