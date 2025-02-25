@@ -20,7 +20,7 @@ namespace AlunosCursosApi.Controllers
         }
 
         //Listar Alunos
-        [HttpGet ("/ListarAlunos")]
+        [HttpGet ("ListarAlunos")]
         public async Task<ActionResult<List<AlunosModel>>> ListarAlunos()
         {
             return await _context.Alunos.ToListAsync();
@@ -35,7 +35,7 @@ namespace AlunosCursosApi.Controllers
         }
 
         //Criar um aluno
-        [HttpPost ("/CriarAluno")]
+        [HttpPost ("CriarAluno")]
         public async Task<ActionResult> CriarAluno([FromBody] AlunosModel aluno)
         {
             if(aluno.VerificarIdade())

@@ -20,7 +20,7 @@ namespace AlunosCursosApi.Controllers
         }
 
         //Matricular um aluno ou criar uma matricula
-        [HttpPost ("/MatricularAluno")]
+        [HttpPost ("MatricularAluno")]
         public async Task<ActionResult> MatricularAluno([FromBody] List<int> cursoIds,int alunoId)
         {
             var aluno = await _context.Alunos.FindAsync(alunoId);
@@ -41,7 +41,7 @@ namespace AlunosCursosApi.Controllers
         }
 
         //Listar todas os alunos matriculados
-        [HttpGet ("/ListarMatriculas")]
+        [HttpGet ("ListarMatriculas")]
         public async Task<ActionResult<List<MatriculasModel>>> ListarMatriculas()
         {
             var matriculas = await _context.Matriculas

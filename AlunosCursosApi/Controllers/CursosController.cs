@@ -20,7 +20,7 @@ namespace AlunosCursosApi.Controllers
         }
 
         //listar todos os cursos existentes
-        [HttpGet ("/ListarCursos")]
+        [HttpGet ("ListarCursos")]
         public async Task<ActionResult<List<CursosModel>>> GetCursos()
         {
             return await _context.Cursos.ToListAsync();
@@ -33,7 +33,7 @@ namespace AlunosCursosApi.Controllers
         }
 
         //Criar um curso
-        [HttpPost ("/CriarCurso")]
+        [HttpPost ("CriarCurso")]
         public async Task<ActionResult> PostCurso([FromBody] CursosModel curso)
         {
             _context.Cursos.Add(curso);
