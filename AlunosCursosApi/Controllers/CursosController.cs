@@ -40,5 +40,22 @@ namespace AlunosCursosApi.Controllers
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(ObterCursoPeloId), new {CursoId = curso.CursoId}, curso);
         }
+
+        //Editar um Curso existente
+        [HttpPut ("{CursoId}")]
+        public async Task<ActionResult<CursosModel>> EditarCurso(int CursoId, [FromBody] CursosModel curso)
+        {
+            var cursoObtido = await _context.Cursos.FindAsync(CursoId);
+            //Após encontrar o curso pelo ID ele busca o id no banco de dados
+            _context.Cursos.Attach(cursoObtido);
+            
+            cursoObtido.Nome = curso.Nome;
+            cursoObtido.Descricao = curso.Descricao;
+
+            _context.Entry(cursoObtido).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
     }
 }
